@@ -5,28 +5,28 @@ import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
+// import thumb01 from '../assets/images/thumbs/01.jpg'
+// import thumb02 from '../assets/images/thumbs/02.jpg'
+// import thumb03 from '../assets/images/thumbs/03.jpg'
+// import thumb04 from '../assets/images/thumbs/04.jpg'
+// import thumb05 from '../assets/images/thumbs/05.jpg'
+// import thumb06 from '../assets/images/thumbs/06.jpg'
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
+// import full01 from '../assets/images/fulls/01.jpg'
+// import full02 from '../assets/images/fulls/02.jpg'
+// import full03 from '../assets/images/fulls/03.jpg'
+// import full04 from '../assets/images/fulls/04.jpg'
+// import full05 from '../assets/images/fulls/05.jpg'
+// import full06 from '../assets/images/fulls/06.jpg'
 
-const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
-];
+// const DEFAULT_IMAGES = [
+//     { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+//     { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+//     { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+//     { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+//     { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+//     { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+// ];
 
 class HomeIndex extends React.Component {
 
@@ -34,49 +34,49 @@ class HomeIndex extends React.Component {
         super();
 
         this.state = {
-            lightboxIsOpen: false,
-            currentImage: 0,
+            // lightboxIsOpen: false,
+            // currentImage: 0,
         };
 
-        this.closeLightbox = this.closeLightbox.bind(this);
-        this.gotoNext = this.gotoNext.bind(this);
-        this.gotoPrevious = this.gotoPrevious.bind(this);
-        this.openLightbox = this.openLightbox.bind(this);
-        this.handleClickImage = this.handleClickImage.bind(this);
+        // this.closeLightbox = this.closeLightbox.bind(this);
+        // this.gotoNext = this.gotoNext.bind(this);
+        // this.gotoPrevious = this.gotoPrevious.bind(this);
+        // this.openLightbox = this.openLightbox.bind(this);
+        // this.handleClickImage = this.handleClickImage.bind(this);
     }
 
-    openLightbox (index, event) {
-        event.preventDefault();
-        this.setState({
-            currentImage: index,
-            lightboxIsOpen: true,
-        });
-    }
-    closeLightbox () {
-        this.setState({
-            currentImage: 0,
-            lightboxIsOpen: false,
-        });
-    }
-    gotoPrevious () {
-        this.setState({
-            currentImage: this.state.currentImage - 1,
-        });
-    }
-    gotoNext () {
-        this.setState({
-            currentImage: this.state.currentImage + 1,
-        });
-    }
-    handleClickImage () {
-        if (this.state.currentImage === this.props.images.length - 1) return;
+    // openLightbox (index, event) {
+    //     event.preventDefault();
+    //     this.setState({
+    //         currentImage: index,
+    //         lightboxIsOpen: true,
+    //     });
+    // }
+    // closeLightbox () {
+    //     this.setState({
+    //         currentImage: 0,
+    //         lightboxIsOpen: false,
+    //     });
+    // }
+    // gotoPrevious () {
+    //     this.setState({
+    //         currentImage: this.state.currentImage - 1,
+    //     });
+    // }
+    // gotoNext () {
+    //     this.setState({
+    //         currentImage: this.state.currentImage + 1,
+    //     });
+    // }
+    // handleClickImage () {
+    //     if (this.state.currentImage === this.props.images.length - 1) return;
 
-        this.gotoNext();
-    }
+    //     this.gotoNext();
+    // }
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+        const siteTitle = "Mark Olech"
+        const siteDescription = "Portfolio"
 
         return (
             <Layout>
@@ -89,33 +89,32 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>My Portfolio</h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+                        <p>I am a Full Stack Application Developer specializing in GraphQL, React, React Native, iOS, Android, Node and Express. If you would like to contact me, the best place to reach me is on Twitter on in the contact form below.</p>
                         <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
+                            <li><a href="https://twitter.com/MarkOlech" className="button">Contact on Twitter</a></li>
                         </ul>
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h2>Recent Projects</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
+                        {/* <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
                             src,
                             thumbnail,
                             caption,
                             description
-                        }))} />
+                        }))} /> */}
 
-                        <ul className="actions">
+                        {/* <ul className="actions">
                             <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>
+                        </ul> */}
                     </section>
 
-                    <section id="three">
+                    {/* <section id="three">
                         <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                        <p>Contact me about any of my projects, or if you have a project or company you think I would be a fit to work with.</p>
                         <div className="row">
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
@@ -128,8 +127,8 @@ class HomeIndex extends React.Component {
                                 <ul className="actions">
                                     <li><input type="submit" value="Send Message" /></li>
                                 </ul>
-                            </div>
-                            <div className="4u 12u$(small)">
+                            </div> */}
+                            {/* <div className="4u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-home"><span className="label">Address</span></h3>
@@ -146,9 +145,9 @@ class HomeIndex extends React.Component {
                                         <a href="#">hello@untitled.tld</a>
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
-                    </section>
+                            </div> */}
+                        {/* </div>
+                    </section> */}
 
                 </div>
 
