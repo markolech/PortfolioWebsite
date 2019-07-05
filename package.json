@@ -5,15 +5,19 @@
   "author": "Hunter Chang",
   "dependencies": {
     "gatsby": "^2.2.9",
+    "gatsby-cli": "^2.7.7",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sass": "^2.0.11",
+    "global": "^4.4.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
-    "react-images": "^0.5.19"
+    "react-images": "^0.5.19",
+    "react-navigation": "^3.11.0",
+    "react-router-dom": "^5.0.1"
   },
   "keywords": [
     "gatsby"

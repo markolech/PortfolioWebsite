@@ -11,7 +11,7 @@ class Footer extends React.Component {
                         {/* <li><a href="#" className="icon fa-envelope-o"><span className="label">Email</span></a></li> */}
                     </ul>
                     <ul className="copyright">
-                        <li>&copy; Mark Olech</li><li>Built with <a href="https://www.gatsbyjs.org/">GATSBY</a></li>
+                        <li>&copy; Mark Olech</li><li>Built with <a href="https://www.gatsbyjs.org/">Gatsby</a> / <a href="https://reactjs.org/">React</a></li>
                     </ul>
                 </div>
             </div>
