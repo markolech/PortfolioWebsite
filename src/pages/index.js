@@ -7,6 +7,15 @@ import Layout from '../components/layout'
 import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
 import thumb01 from '../assets/images/thumbs/01.jpg'
 import thumb02 from '../assets/images/thumbs/02.jpg'
 import thumb03 from '../assets/images/thumbs/03.jpg'
@@ -21,7 +30,13 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-const DEFAULT_IMAGES = [
+const useStyles = makeStyles({
+  card: {
+    maxWidth: 345,
+  },
+});
+
+const SENIOR_CARE_IMAGES = [
   {
     id: '1',
     src: full01,
@@ -67,7 +82,9 @@ const DEFAULT_IMAGES = [
 ]
 
 class HomeIndex extends React.Component {
-  constructor() {
+	
+	
+	constructor() {
     super()
 
     this.state = {
@@ -113,7 +130,10 @@ class HomeIndex extends React.Component {
 
   render() {
     const siteTitle = 'Mark Olech'
-    const siteDescription = 'Portfolio'
+		const siteDescription = 'Portfolio'
+		let displaySeniorCareGallery = false
+		let displayR10Gallery = false
+		const classes = useStyles();
 
     return (
       <Layout>
@@ -144,17 +164,18 @@ class HomeIndex extends React.Component {
 
           <section id="two">
             <h2>Recent Projects</h2>
-
-            <Gallery
-              images={DEFAULT_IMAGES.map(
-                ({ id, src, thumbnail, caption, description }) => ({
-                  src,
-                  thumbnail,
-                  caption,
-                  description,
-                })
-              )}
-            />
+            {displaySeniorCareGallery ? (
+              <Gallery
+                images={SENIOR_CARE_IMAGES.map(
+                  ({ id, src, thumbnail, caption, description }) => ({
+                    src,
+                    thumbnail,
+                    caption,
+                    description,
+                  })
+                )}
+              />
+            ) : null}
 
             <ul className="actions">
               <li>
@@ -171,7 +192,7 @@ class HomeIndex extends React.Component {
             /> */}
           </section>
 
-          <section id="three">
+          {/* <section id="three">
             <h2>Get In Touch</h2>
             <p>
               Contact me about any of my projects, or if you have a project or
@@ -240,7 +261,7 @@ class HomeIndex extends React.Component {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     )
