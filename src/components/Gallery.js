@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Lightbox from 'react-images';
 
 class Gallery extends Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
 
         this.state = {
             lightboxIsOpen: false,
@@ -18,6 +18,12 @@ class Gallery extends Component {
         this.handleClickImage = this.handleClickImage.bind(this);
         this.openLightbox = this.openLightbox.bind(this);
     }
+
+    componentDidMount() {
+        // this.openLightbox(0, null)
+        // console.log('props in gallery', this.props)
+    }
+
     openLightbox (index, event) {
         event.preventDefault();
         this.setState({
@@ -30,6 +36,7 @@ class Gallery extends Component {
             currentImage: 0,
             lightboxIsOpen: false,
         });
+        // this.props.displayProjectGallery('displaySeniorcareGallery')
     }
     gotoPrevious () {
         this.setState({

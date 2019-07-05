@@ -1,20 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import { Button } from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
-
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 import thumb01 from '../assets/images/thumbs/01.jpg'
 import thumb02 from '../assets/images/thumbs/02.jpg'
@@ -30,11 +20,34 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-  },
-});
+import SeniorcareCard from '../components/SeniorCareCard'
+import R10Card from '../components/R10Card'
+import Bazaar from '../components/Bazaar'
+import SpaceExplorer from '../components/SpaceExplorer'
+
+import { createGenerateClassName } from '@material-ui/styles'
+
+const container = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  margin: 'auto',
+}
+
+const projectContainer = {
+  diplay: 'flex',
+  flexDirection: 'column',
+  flex: '1',
+}
+
+// const project = {
+// 	flex: "1",
+// 	margin: "5px",
+// 	padding: "20px",
+// 	minwidth: '200px',
+// }
+
+//Need to refactor this out into another file, or into the gallary directly
 
 const SENIOR_CARE_IMAGES = [
   {
@@ -81,59 +94,77 @@ const SENIOR_CARE_IMAGES = [
   },
 ]
 
+const R10_IMAGES = [
+  {
+    id: '1',
+    src: full01,
+    thumbnail: thumb01,
+    caption: 'Photo 1',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+  {
+    id: '2',
+    src: full02,
+    thumbnail: thumb02,
+    caption: 'Photo 2',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+  {
+    id: '3',
+    src: full03,
+    thumbnail: thumb03,
+    caption: 'Photo 3',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+  {
+    id: '4',
+    src: full04,
+    thumbnail: thumb04,
+    caption: 'Photo 4',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+  {
+    id: '5',
+    src: full05,
+    thumbnail: thumb05,
+    caption: 'Photo 5',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+  {
+    id: '6',
+    src: full06,
+    thumbnail: thumb06,
+    caption: 'Photo 6',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+]
+
+
 class HomeIndex extends React.Component {
-	
-	
-	constructor() {
+  constructor() {
     super()
 
     this.state = {
-      lightboxIsOpen: false,
-      currentImage: 0,
+      displaySeniorcareGallery: false,
+      displayR10Gallery: false,
+      displayBazaarGallery: false,
+      displaySpaceExplorerGallery: false,
     }
 
-    this.closeLightbox = this.closeLightbox.bind(this)
-    this.gotoNext = this.gotoNext.bind(this)
-    this.gotoPrevious = this.gotoPrevious.bind(this)
-    this.openLightbox = this.openLightbox.bind(this)
-    this.handleClickImage = this.handleClickImage.bind(this)
+    this.displayProjectGallery = this.displayProjectGallery.bind(this)
   }
 
-  openLightbox(index, event) {
-    event.preventDefault()
+  displayProjectGallery(projectNameStateFlag) {
+    console.log('changing ', projectNameStateFlag)
     this.setState({
-      currentImage: index,
-      lightboxIsOpen: true,
+			[projectNameStateFlag]: !this.state[projectNameStateFlag],
     })
-  }
-  closeLightbox() {
-    this.setState({
-      currentImage: 0,
-      lightboxIsOpen: false,
-    })
-  }
-  gotoPrevious() {
-    this.setState({
-      currentImage: this.state.currentImage - 1,
-    })
-  }
-  gotoNext() {
-    this.setState({
-      currentImage: this.state.currentImage + 1,
-    })
-  }
-  handleClickImage() {
-    if (this.state.currentImage === this.props.images.length - 1) return
-
-    this.gotoNext()
   }
 
+  
   render() {
     const siteTitle = 'Mark Olech'
-		const siteDescription = 'Portfolio'
-		let displaySeniorCareGallery = false
-		let displayR10Gallery = false
-		const classes = useStyles();
+    const siteDescription = 'Portfolio'
 
     return (
       <Layout>
@@ -164,35 +195,80 @@ class HomeIndex extends React.Component {
 
           <section id="two">
             <h2>Recent Projects</h2>
-            {displaySeniorCareGallery ? (
-              <Gallery
-                images={SENIOR_CARE_IMAGES.map(
-                  ({ id, src, thumbnail, caption, description }) => ({
-                    src,
-                    thumbnail,
-                    caption,
-                    description,
-                  })
-                )}
-              />
-            ) : null}
+            <div style={container}>
+              <div style={projectContainer}>
+                <SeniorcareCard
+									displayProjectGallery={this.displayProjectGallery}
+									displaySeniorcareGallery={this.state.displaySeniorcareGallery}
+                />
 
-            <ul className="actions">
-              <li>
+                {this.state.displaySeniorcareGallery ? (
+                  <Gallery
+										displaySeniorcareGallery={this.state.displaySeniorcareGallery}
+                    images={SENIOR_CARE_IMAGES.map(
+                      ({ id, src, thumbnail, caption, description }) => ({
+                        src,
+                        thumbnail,
+                        caption,
+                        description,
+                      })
+										)}
+										displayProjectGallery={this.displayProjectGallery}
+                  />
+                ) : null}
+
+								<R10Card 
+									displayProjectGallery={this.displayProjectGallery} 
+									displayR10Gallery={this.state.displayR10Gallery}
+								/>
+
+								{this.state.displayR10Gallery ? (
+                  <Gallery
+										displaySeniorcareGallery={this.state.displayR10Gallery}
+                    images={SENIOR_CARE_IMAGES.map(
+                      ({ id, src, thumbnail, caption, description }) => ({
+                        src,
+                        thumbnail,
+                        caption,
+                        description,
+                      })
+										)}
+										displayProjectGallery={this.displayProjectGallery}
+                  />
+                ) : null}
+
+
+                <Bazaar displayProjectGallery={this.displayProjectGallery} />
+                <SpaceExplorer
+                  displayProjectGallery={this.displayProjectGallery}
+                />
+              </div>
+            </div>
+
+            {/* <ul className="actions">
+							<br></br> 
+							<li>
                 <a href="#" className="button">
                   Full Portfolio
                 </a>
               </li>
             </ul>
-
-            <Link to="/seniorcare/">Senior Care</Link>
+            <Link to="/seniorcare/">Senior Care</Link> */}
             {/* <Button
                 onPress={() => navigate('SeniorCareProject')}
                 title='Senior Care Full Stack App' 
             /> */}
           </section>
+        </div>
+      </Layout>
+    )
+  }
+}
 
-          {/* <section id="three">
+export default HomeIndex
+
+{
+  /* <section id="three">
             <h2>Get In Touch</h2>
             <p>
               Contact me about any of my projects, or if you have a project or
@@ -261,11 +337,5 @@ class HomeIndex extends React.Component {
                 </ul>
               </div>
             </div>
-          </section> */}
-        </div>
-      </Layout>
-    )
-  }
+          </section> */
 }
-
-export default HomeIndex
