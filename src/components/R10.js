@@ -24,7 +24,7 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-const BAZAAR_IMAGES = [
+const R10_IMAGES = [
   {
     id: '1',
     src: full01,
@@ -76,8 +76,11 @@ const useStyles = makeStyles({
   },
 })
 
-const Bazaar = props => {
-  const [displayBazaarGallery, setDisplayBazaarGallery] = useState(false)
+const R10Card = props => {
+  const [
+    displayR10Gallery,
+    setDisplayR10Gallery,
+  ] = useState(false)
 
   const classes = useStyles()
 
@@ -89,19 +92,20 @@ const Bazaar = props => {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Bazaar Project"
+            alt="R10 Project"
             height="240"
-            image={thumb03}
-            title="Bazaar Project"
+            image={thumb02}
+            title="R10 Project"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Bazaar
+              R10
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              A full stack marketplace application built using GraphQL, React,
-              Node, Express and GraphQL. Users can browse, buy and sell items in
-              the Bazaar marketplace.
+              A tech conference iOS/Android mobile application built using
+              GraphQL, React Native and Node. Users can browse, favourite
+              sessions and find out more informationa about the conference and
+              speakers.
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -112,18 +116,18 @@ const Bazaar = props => {
           <Button
             size="small"
             color="primary"
-            onClick={() => setDisplayBazaarGallery(!displayBazaarGallery)}
+            onClick={() => setDisplayR10Gallery(!displayR10Gallery)
+            }
           >
-            {displayBazaarGallery
+            {displayR10Gallery
               ? (buttonText = 'Close Gallery')
               : (buttonText = 'Open Gallery')}
           </Button>
         </CardActions>
       </Card>
-
-      {displayBazaarGallery ? (
+      {displayR10Gallery ? (
         <Gallery
-          images={BAZAAR_IMAGES.map(
+          images={R10_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
               thumbnail,
@@ -131,11 +135,10 @@ const Bazaar = props => {
               description,
             })
           )}
-          setDisplayBazaarGallery={setDisplayBazaarGallery}
         />
       ) : null}
     </div>
   )
 }
 
-export default Bazaar
+export default R10Card

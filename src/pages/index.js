@@ -20,8 +20,8 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-import SeniorcareCard from '../components/SeniorCareCard'
-import R10Card from '../components/R10Card'
+import SeniorCare from '../components/SeniorCare'
+import R10Card from '../components/R10'
 import Bazaar from '../components/Bazaar'
 import SpaceExplorer from '../components/SpaceExplorer'
 
@@ -47,205 +47,52 @@ const projectContainer = {
 // 	minwidth: '200px',
 // }
 
-//Need to refactor this out into another file, or into the gallary directly
+const HomeIndex = () => {
+  const siteTitle = 'Mark Olech'
+  const siteDescription = 'Portfolio'
 
-const SENIOR_CARE_IMAGES = [
-  {
-    id: '1',
-    src: full01,
-    thumbnail: thumb01,
-    caption: 'Photo 1',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '2',
-    src: full02,
-    thumbnail: thumb02,
-    caption: 'Photo 2',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '3',
-    src: full03,
-    thumbnail: thumb03,
-    caption: 'Photo 3',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '4',
-    src: full04,
-    thumbnail: thumb04,
-    caption: 'Photo 4',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '5',
-    src: full05,
-    thumbnail: thumb05,
-    caption: 'Photo 5',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '6',
-    src: full06,
-    thumbnail: thumb06,
-    caption: 'Photo 6',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-]
+  return (
+    <Layout>
+      <Helmet>
+        <title>{siteTitle}</title>
+        <meta name="description" content={siteDescription} />
+      </Helmet>
 
-const R10_IMAGES = [
-  {
-    id: '1',
-    src: full01,
-    thumbnail: thumb01,
-    caption: 'Photo 1',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '2',
-    src: full02,
-    thumbnail: thumb02,
-    caption: 'Photo 2',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '3',
-    src: full03,
-    thumbnail: thumb03,
-    caption: 'Photo 3',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '4',
-    src: full04,
-    thumbnail: thumb04,
-    caption: 'Photo 4',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '5',
-    src: full05,
-    thumbnail: thumb05,
-    caption: 'Photo 5',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '6',
-    src: full06,
-    thumbnail: thumb06,
-    caption: 'Photo 6',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-]
+      <div id="main">
+        <section id="one">
+          <header className="major">
+            <h2>My Portfolio</h2>
+          </header>
+          <p>
+            I am a Full Stack Application Developer specializing in GraphQL,
+            React, React Native, iOS, Android, Node and Express. If you would
+            like to contact me, the best place to reach me is on Twitter on in
+            the contact form below.
+          </p>
+          <ul className="actions">
+            <li>
+              <a href="https://twitter.com/MarkOlech" className="button">
+                Contact on Twitter
+              </a>
+            </li>
+          </ul>
+        </section>
 
+        <section id="two">
+          <h2>Recent Projects</h2>
+          <div style={container}>
+            <div style={projectContainer}>
+              <SeniorCare />
 
-class HomeIndex extends React.Component {
-  constructor() {
-    super()
+              <R10Card />
 
-    this.state = {
-      displaySeniorcareGallery: false,
-      displayR10Gallery: false,
-      displayBazaarGallery: false,
-      displaySpaceExplorerGallery: false,
-    }
+              <Bazaar />
 
-    this.displayProjectGallery = this.displayProjectGallery.bind(this)
-  }
-
-  displayProjectGallery(projectNameStateFlag) {
-    console.log('changing ', projectNameStateFlag)
-    this.setState({
-			[projectNameStateFlag]: !this.state[projectNameStateFlag],
-    })
-  }
-
-  
-  render() {
-    const siteTitle = 'Mark Olech'
-    const siteDescription = 'Portfolio'
-
-    return (
-      <Layout>
-        <Helmet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
-        </Helmet>
-
-        <div id="main">
-          <section id="one">
-            <header className="major">
-              <h2>My Portfolio</h2>
-            </header>
-            <p>
-              I am a Full Stack Application Developer specializing in GraphQL,
-              React, React Native, iOS, Android, Node and Express. If you would
-              like to contact me, the best place to reach me is on Twitter on in
-              the contact form below.
-            </p>
-            <ul className="actions">
-              <li>
-                <a href="https://twitter.com/MarkOlech" className="button">
-                  Contact on Twitter
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section id="two">
-            <h2>Recent Projects</h2>
-            <div style={container}>
-              <div style={projectContainer}>
-                <SeniorcareCard
-									displayProjectGallery={this.displayProjectGallery}
-									displaySeniorcareGallery={this.state.displaySeniorcareGallery}
-                />
-
-                {this.state.displaySeniorcareGallery ? (
-                  <Gallery
-										displaySeniorcareGallery={this.state.displaySeniorcareGallery}
-                    images={SENIOR_CARE_IMAGES.map(
-                      ({ id, src, thumbnail, caption, description }) => ({
-                        src,
-                        thumbnail,
-                        caption,
-                        description,
-                      })
-										)}
-										displayProjectGallery={this.displayProjectGallery}
-                  />
-                ) : null}
-
-								<R10Card 
-									displayProjectGallery={this.displayProjectGallery} 
-									displayR10Gallery={this.state.displayR10Gallery}
-								/>
-
-								{this.state.displayR10Gallery ? (
-                  <Gallery
-										displaySeniorcareGallery={this.state.displayR10Gallery}
-                    images={SENIOR_CARE_IMAGES.map(
-                      ({ id, src, thumbnail, caption, description }) => ({
-                        src,
-                        thumbnail,
-                        caption,
-                        description,
-                      })
-										)}
-										displayProjectGallery={this.displayProjectGallery}
-                  />
-                ) : null}
-
-
-                <Bazaar displayProjectGallery={this.displayProjectGallery} />
-                <SpaceExplorer
-                  displayProjectGallery={this.displayProjectGallery}
-                />
-              </div>
+              <SpaceExplorer />
             </div>
+          </div>
 
-            {/* <ul className="actions">
+          {/* <ul className="actions">
 							<br></br> 
 							<li>
                 <a href="#" className="button">
@@ -254,15 +101,14 @@ class HomeIndex extends React.Component {
               </li>
             </ul>
             <Link to="/seniorcare/">Senior Care</Link> */}
-            {/* <Button
+          {/* <Button
                 onPress={() => navigate('SeniorCareProject')}
                 title='Senior Care Full Stack App' 
             /> */}
-          </section>
-        </div>
-      </Layout>
-    )
-  }
+        </section>
+      </div>
+    </Layout>
+  )
 }
 
 export default HomeIndex

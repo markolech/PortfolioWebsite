@@ -24,7 +24,7 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-const BAZAAR_IMAGES = [
+const SENIOR_CARE_IMAGES = [
   {
     id: '1',
     src: full01,
@@ -71,17 +71,17 @@ const BAZAAR_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: "75%",
+    maxWidth: '75%',
     marginBottom: 20,
   },
 })
 
-const Bazaar = props => {
-  const [displayBazaarGallery, setDisplayBazaarGallery] = useState(false)
+const SeniorCare = props => {
+  const [displaySeniorCareGallery, setSeniorCareGallery] = useState(false)
 
   const classes = useStyles()
 
-  let buttonText;
+  let buttonText
 
   return (
     <div>
@@ -89,19 +89,21 @@ const Bazaar = props => {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Bazaar Project"
+            alt="Senior Care Project"
             height="240"
-            image={thumb03}
-            title="Bazaar Project"
+            image={thumb01}
+            title="Senior Care Project"
+            onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
           />
-          <CardContent>
+          <CardContent
+            onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
+          >
             <Typography gutterBottom variant="h5" component="h2">
-              Bazaar
+              Senior Care
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              A full stack marketplace application built using GraphQL, React,
-              Node, Express and GraphQL. Users can browse, buy and sell items in
-              the Bazaar marketplace.
+              A full stack application built using GraphQL, React, Node, Express
+              and PostgreSQL.
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -112,18 +114,17 @@ const Bazaar = props => {
           <Button
             size="small"
             color="primary"
-            onClick={() => setDisplayBazaarGallery(!displayBazaarGallery)}
+            onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
           >
-            {displayBazaarGallery
+            {displaySeniorCareGallery
               ? (buttonText = 'Close Gallery')
               : (buttonText = 'Open Gallery')}
           </Button>
         </CardActions>
       </Card>
-
-      {displayBazaarGallery ? (
+      {displaySeniorCareGallery ? (
         <Gallery
-          images={BAZAAR_IMAGES.map(
+          images={SENIOR_CARE_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
               thumbnail,
@@ -131,11 +132,10 @@ const Bazaar = props => {
               description,
             })
           )}
-          setDisplayBazaarGallery={setDisplayBazaarGallery}
         />
       ) : null}
     </div>
   )
 }
 
-export default Bazaar
+export default SeniorCare
