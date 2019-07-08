@@ -3,22 +3,6 @@ import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-import Lightbox from 'react-images'
-import Gallery from '../components/Gallery'
-
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
-
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
 
 import SeniorCare from '../components/SeniorCare'
 import R10Card from '../components/R10'
@@ -27,18 +11,18 @@ import SpaceExplorer from '../components/SpaceExplorer'
 
 import { createGenerateClassName } from '@material-ui/styles'
 
-const container = {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  margin: 'auto',
-}
+// const container = {
+//   display: 'flex',
+//   flexDirection: 'column',
+//   width: '100%',
+//   margin: 'auto',
+// }
 
-const projectContainer = {
-  diplay: 'flex',
-  flexDirection: 'column',
-  flex: '1',
-}
+// const projectContainer = {
+//   diplay: 'flex',
+//   flexDirection: 'column',
+//   flex: '1',
+// }
 
 // const project = {
 // 	flex: "1",
@@ -80,8 +64,8 @@ const HomeIndex = () => {
 
         <section id="two">
           <h2>Recent Projects</h2>
-          <div style={container}>
-            <div style={projectContainer}>
+          <div>
+            <div>
               <SeniorCare />
 
               <R10Card />
@@ -89,6 +73,9 @@ const HomeIndex = () => {
               <Bazaar />
 
               <SpaceExplorer />
+
+             
+
             </div>
           </div>
 
@@ -101,10 +88,6 @@ const HomeIndex = () => {
               </li>
             </ul>
             <Link to="/seniorcare/">Senior Care</Link> */}
-          {/* <Button
-                onPress={() => navigate('SeniorCareProject')}
-                title='Senior Care Full Stack App' 
-            /> */}
         </section>
       </div>
     </Layout>

@@ -71,8 +71,13 @@ const SPACE_EXPLORER_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: "75%",
+    maxWidth: '75%',
     marginBottom: 20,
+  },
+  cardContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 })
 
@@ -84,47 +89,48 @@ const SpaceExplorer = props => {
 
   const classes = useStyles()
 
-  let buttonText;
+  let buttonText
 
   return (
     <div>
-      <Card className={classes.card}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            alt="Bazaar Project"
-            height="240"
-            image={thumb04}
-            title="Bazaar Project"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              Space Explorer
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              A web application built using GraphQL, React, Node, and Express.
-              Users can browse, buy and sell items in the Bazaar marketplace.
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          {/* <Button size="small" color="primary">
+      <div className={classes.cardContainer}>
+        <Card className={classes.card}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              alt="Bazaar Project"
+              height="240"
+              image={thumb04}
+              title="Bazaar Project"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Space Explorer
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                A web application built using GraphQL, React, Node, and Express.
+                Users can browse, buy and sell items in the Bazaar marketplace.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            {/* <Button size="small" color="primary">
           Share
         </Button> */}
-          <Button
-            size="small"
-            color="primary"
-            onClick={() =>
-              setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
-            }
-          >
-            {displaySpaceExplorerGallery
-              ? (buttonText = 'Close Gallery')
-              : (buttonText = 'Open Gallery')}
-          </Button>
-        </CardActions>
-      </Card>
-
+            <Button
+              size="small"
+              color="primary"
+              onClick={() =>
+                setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
+              }
+            >
+              {displaySpaceExplorerGallery
+                ? (buttonText = 'Close Gallery')
+                : (buttonText = 'Open Gallery')}
+            </Button>
+          </CardActions>
+        </Card>
+      </div>
       {displaySpaceExplorerGallery ? (
         <Gallery
           images={SPACE_EXPLORER_IMAGES.map(

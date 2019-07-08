@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+// import ListItemText from '@material-ui/core/ListItemText';
+// import ListItem from '@material-ui/core/ListItem';
+// import List from '@material-ui/core/List';
+// import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
 
 import Gallery from '../components/Gallery'
-// import LargeGalleryModal from '../components/LargeGalleryModal'
 
 import thumb01 from '../assets/images/projects/R10/R10_01_full.jpg'
 import full01 from '../assets/images/projects/R10/R10_01_thumb.jpg'
@@ -27,8 +31,6 @@ import thumb07 from '../assets/images/projects/R10/R10_07_full.jpg'
 import full07 from '../assets/images/projects/R10/R10_07_thumb.jpg'
 import thumb08 from '../assets/images/projects/R10/R10_08_full.jpg'
 import full08 from '../assets/images/projects/R10/R10_08_thumb.jpg'
-
-import { ClientError } from 'graphql-request'
 
 const R10_IMAGES = [
   {
@@ -77,81 +79,72 @@ const R10_IMAGES = [
     id: '7',
     src: full07,
     thumbnail: thumb07,
-    caption: 'Photo 7',
+    caption: 'Photo 6',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '8',
     src: full08,
     thumbnail: thumb08,
-    caption: 'Photo 8',
+    caption: 'Photo 6',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
 ]
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: '75%',
-    marginBottom: 20,
+
+const useStyles = makeStyles(theme => ({
+  appBar: {
+    position: 'relative',
   },
-  cardContainer: {
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1,
+  },
+  container: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-})
+    margin: 100,
+    maxWidth: "50%",
+  }
+}));
 
-const R10Card = props => {
-  const [displayR10Gallery, setDisplayR10Gallery] = useState(false)
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
-  const classes = useStyles()
+export default function FullScreenDialog() {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
-  let buttonText
+  function handleClickOpen() {
+    setOpen(true);
+  }
+
+  function handleClose() {
+    setOpen(false);
+  }
 
   return (
     <div>
-      <div className={classes.cardContainer}>
-        <Card className={classes.card}>
-          <CardActionArea
-            onClick={() => setDisplayR10Gallery(!displayR10Gallery)}
-          >
-            <CardMedia
-              component="img"
-              alt="R10 Project"
-              height="240"
-              image={thumb01}
-              title="R10 Project"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                R10
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                A tech conference iOS/Android mobile application built using
-                GraphQL, React Native and Node. Users can browse, favourite
-                sessions and find out more informationa about the conference and
-                speakers.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            {/* <Button size="small" color="primary">
-          Share
-        </Button> */}
-            <Button
-              size="small"
-              color="primary"
-              onClick={() => setDisplayR10Gallery(!displayR10Gallery)}
-            >
-              {displayR10Gallery
-                ? (buttonText = 'Close Gallery')
-                : (buttonText = 'Open Gallery')}
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Open full-screen dialog
+      </Button>
+      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+        <AppBar className={classes.appBar}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="Close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              Sound
+            </Typography>
+            <Button color="inherit" onClick={handleClose}>
+              save
             </Button>
-          </CardActions>
-        </Card>
-      </div>
-      {displayR10Gallery ? (
+          </Toolbar>
+        </AppBar>
+        
         <Gallery
+          className={classes.container}
           images={R10_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
@@ -161,11 +154,8 @@ const R10Card = props => {
             })
           )}
         />
-      ) : null}
-      {/* <Button onPress={() => null}>Test</Button> */}
-  
-    </div>
-  )
-}
 
-export default R10Card
+      </Dialog>
+    </div>
+  );
+}
