@@ -70,9 +70,11 @@ const HomeIndex = () => {
 
               <R10Card />
 
+              <SpaceExplorer />
+
               <Bazaar />
 
-              <SpaceExplorer />
+             
 
              
 

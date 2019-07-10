@@ -10,28 +10,26 @@ import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
+// import thumb01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Full.jpg'
+// import full01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Thumb.jpg'
+import thumb02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Full.jpg'
+import full02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Thumb.jpg'
+// import thumb03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Full.jpg'
+// import full03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Thumb.jpg'
+import thumb04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Full.jpg'
+import full04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Thumb.jpg'
+// import thumb05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Full.jpg'
+// import full05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Thumb.jpg'
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
 
 const SPACE_EXPLORER_IMAGES = [
-  {
-    id: '1',
-    src: full01,
-    thumbnail: thumb01,
-    caption: 'Photo 1',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
+  // {
+  //   id: '1',
+  //   src: full01,
+  //   thumbnail: thumb01,
+  //   caption: 'Photo 1',
+  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  // },
   {
     id: '2',
     src: full02,
@@ -39,13 +37,13 @@ const SPACE_EXPLORER_IMAGES = [
     caption: 'Photo 2',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
-  {
-    id: '3',
-    src: full03,
-    thumbnail: thumb03,
-    caption: 'Photo 3',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
+  // {
+  //   id: '3',
+  //   src: full03,
+  //   thumbnail: thumb03,
+  //   caption: 'Photo 3',
+  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  // },
   {
     id: '4',
     src: full04,
@@ -53,20 +51,20 @@ const SPACE_EXPLORER_IMAGES = [
     caption: 'Photo 4',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
-  {
-    id: '5',
-    src: full05,
-    thumbnail: thumb05,
-    caption: 'Photo 5',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '6',
-    src: full06,
-    thumbnail: thumb06,
-    caption: 'Photo 6',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
+  // {
+  //   id: '5',
+  //   src: full05,
+  //   thumbnail: thumb05,
+  //   caption: 'Photo 5',
+  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  // },
+  // {
+  //   id: '6',
+  //   src: full06,
+  //   thumbnail: thumb06,
+  //   caption: 'Photo 6',
+  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  // },
 ]
 
 const useStyles = makeStyles({
