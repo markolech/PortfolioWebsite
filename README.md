@@ -1,18 +1,21 @@
-# gatsby-starter-strata
+# My Portfolio Website
 
-**This is a starter for Gatsby.js V2.**
+I build my portfolio website with Gatsby. I used a mix of functional and class based React components as well as Material-UI.
 
-**The older V1 version of this starter can be found on the v1 branch**
+## View Site
 
-Gatsby starter based on the Strata site template, designed by [HTML5 UP](https://html5up.net/strata). Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+https://markolech.com
 
-## Preview
+## Deployment
 
-http://gatsby-strata.surge.sh/
+The site is deployed with Netlify
 
-## Installation
+## More Links
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-strata https://github.com/ChangoMan/gatsby-starter-strata`
+If you want to learn more about Gatsby
 
-Run `gatsby develop` in the terminal to start.
+https://www.gatsbyjs.org/
+
+Deploy your site with Netlify
+
+https://www.netlify.com/
