@@ -38,7 +38,7 @@ const SENIOR_CARE_IMAGES = [
     id: '1',
     src: full01,
     thumbnail: thumb01,
-    caption: 'Family or Caregiver',
+    caption: 'Landing Page',
     description: 'Two user types, family member or caregiver.',
   },
   {
@@ -101,7 +101,7 @@ const SENIOR_CARE_IMAGES = [
     id: '10',
     src: full10,
     thumbnail: thumb10,
-    caption: 'Photo 10',
+    caption: 'Find and apply to jobs.',
     description: 'Find jobs and apply.',
   },
   {
@@ -166,7 +166,7 @@ const SeniorCare = props => {
               color="primary"
               onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
             >
-              Open Gallary
+              Open Gallery
             </Button>
             <a href="https://github.com/markolech/SeniorConnect" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
