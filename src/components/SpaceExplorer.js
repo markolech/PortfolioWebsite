@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
-
 import thumb01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Full.png'
 import full01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Thumb.png'
 import thumb02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Full.png'
@@ -20,7 +19,6 @@ import thumb04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_
 import full04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Full.png'
 import thumb05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Full.png'
 import full05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Thumb.png'
-
 
 const SPACE_EXPLORER_IMAGES = [
   {
