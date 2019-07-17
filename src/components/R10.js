@@ -28,7 +28,7 @@ import full07 from '../assets/images/projects/R10/R10_07_thumb.jpg'
 import thumb08 from '../assets/images/projects/R10/R10_08_full.jpg'
 import full08 from '../assets/images/projects/R10/R10_08_thumb.jpg'
 
-import { ClientError } from 'graphql-request'
+// import { ClientError } from 'graphql-request'
 
 const R10_IMAGES = [
   {
@@ -106,8 +106,6 @@ const R10Card = props => {
 
   const classes = useStyles()
 
-  let buttonText
-
   return (
     <div>
       <div className={classes.cardContainer}>
@@ -143,11 +141,9 @@ const R10Card = props => {
               color="primary"
               onClick={() => setDisplayR10Gallery(!displayR10Gallery)}
             >
-              {displayR10Gallery
-                ? (buttonText = 'Close Gallery')
-                : (buttonText = 'Open Gallery')}
+              Open Gallary
             </Button>
-            <a href="https://github.com/markolech/R10" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a href="https://github.com/markolech/R10" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>

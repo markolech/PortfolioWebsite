@@ -86,8 +86,6 @@ const Bazaar = props => {
 
   const classes = useStyles()
 
-  let buttonText
-
   return (
     <div>
       <div className={classes.cardContainer}>
@@ -122,11 +120,9 @@ const Bazaar = props => {
               color="primary"
               onClick={() => setDisplayBazaarGallery(!displayBazaarGallery)}
             >
-              {displayBazaarGallery
-                ? (buttonText = 'Close Gallery')
-                : (buttonText = 'Open Gallery')}
+              Open Gallary
             </Button>
-            <a href="https://github.com/markolech/Bazaar" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a href="https://github.com/markolech/Bazaar" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>

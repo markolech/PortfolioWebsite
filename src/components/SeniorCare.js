@@ -130,8 +130,6 @@ const SeniorCare = props => {
 
   const classes = useStyles()
 
-  let buttonText
-
   return (
     <div>
       <div className={classes.cardContainer}>
@@ -168,11 +166,9 @@ const SeniorCare = props => {
               color="primary"
               onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
             >
-              {displaySeniorCareGallery
-                ? (buttonText = 'Close Gallery')
-                : (buttonText = 'Open Gallery')}
+              Open Gallary
             </Button>
-            <a href="https://github.com/markolech/SeniorConnect" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a href="https://github.com/markolech/SeniorConnect" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>

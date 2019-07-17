@@ -87,8 +87,6 @@ const SpaceExplorer = props => {
 
   const classes = useStyles()
 
-  let buttonText
-
   return (
     <div>
       <div className={classes.cardContainer}>
@@ -124,11 +122,9 @@ const SpaceExplorer = props => {
                 setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
               }
             >
-              {displaySpaceExplorerGallery
-                ? (buttonText = 'Close Gallery')
-                : (buttonText = 'Open Gallery')}
+            Open Gallary
             </Button>
-            <a href="https://github.com/markolech/space_explorer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a href="https://github.com/markolech/space_explorer" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>
