@@ -9,6 +9,10 @@ import R10Card from '../components/R10'
 import Bazaar from '../components/Bazaar'
 import SpaceExplorer from '../components/SpaceExplorer'
 
+// Make cards bigger
+// Open gallery with click
+// Github icon
+
 import { createGenerateClassName } from '@material-ui/styles'
 
 // const container = {
@@ -49,13 +53,13 @@ const HomeIndex = () => {
           </header>
           <p>
             I am a Full Stack Application Developer specializing in GraphQL,
-            React, React Native, iOS, Android, Node and Express. If you would
-            like to contact me, the best place to reach me is on Twitter on in
-            the contact form below.
+            React, React Native, iOS, Android, Node and Express. I am also PMP
+            (Project Management Professional) certified. If you would like to
+            contact me, the best place to reach me is on Twitter.
           </p>
           <ul className="actions">
             <li>
-              <a href="https://twitter.com/MarkOlech" className="button">
+              <a href="https://twitter.com/MarkOlech" target="_blank" className="button">
                 Contact on Twitter
               </a>
             </li>
@@ -73,11 +77,6 @@ const HomeIndex = () => {
               <SpaceExplorer />
 
               <Bazaar />
-
-             
-
-             
-
             </div>
           </div>
 

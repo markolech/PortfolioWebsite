@@ -91,7 +91,7 @@ const R10_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '75%',
+    maxWidth: '100%',
     marginBottom: 20,
   },
   cardContainer: {
@@ -147,11 +147,14 @@ const R10Card = props => {
                 ? (buttonText = 'Close Gallery')
                 : (buttonText = 'Open Gallery')}
             </Button>
+            <a href="https://github.com/markolech/R10" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>
       {displayR10Gallery ? (
         <Gallery
+          lightboxIsOpen={displayR10Gallery}
+          setGalleryView={setDisplayR10Gallery}
           images={R10_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
@@ -162,7 +165,6 @@ const R10Card = props => {
           )}
         />
       ) : null}
-      {/* <Button onPress={() => null}>Test</Button> */}
   
     </div>
   )

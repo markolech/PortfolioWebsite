@@ -69,7 +69,7 @@ const SPACE_EXPLORER_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '75%',
+    maxWidth: '100%',
     marginBottom: 20,
   },
   cardContainer: {
@@ -93,7 +93,9 @@ const SpaceExplorer = props => {
     <div>
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
-          <CardActionArea>
+          <CardActionArea
+            onClick={() => setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)}
+          >
             <CardMedia
               component="img"
               alt="Bazaar Project"
@@ -126,11 +128,14 @@ const SpaceExplorer = props => {
                 ? (buttonText = 'Close Gallery')
                 : (buttonText = 'Open Gallery')}
             </Button>
+            <a href="https://github.com/markolech/space_explorer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>
       {displaySpaceExplorerGallery ? (
         <Gallery
+        lightboxIsOpen={displaySpaceExplorerGallery}
+        setGalleryView={setDisplaySpaceExplorerGallery}
           images={SPACE_EXPLORER_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,

@@ -31,6 +31,7 @@ class Gallery extends Component {
       currentImage: 0,
       lightboxIsOpen: false,
     })
+    this.props.setGalleryView(false)
     // this.props.displayProjectGallery('displaySeniorcareGallery')
   }
   gotoPrevious() {
@@ -80,11 +81,11 @@ class Gallery extends Component {
   render() {
     return (
       <div>
-        {this.renderGallery()}
+        {/* {this.renderGallery()} */}
         <Lightbox
           currentImage={this.state.currentImage}
           images={this.props.images}
-          isOpen={this.state.lightboxIsOpen}
+          isOpen={this.props.lightboxIsOpen}
           onClickImage={this.handleClickImage}
           onClickNext={this.gotoNext}
           onClickPrev={this.gotoPrevious}

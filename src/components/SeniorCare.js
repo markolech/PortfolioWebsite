@@ -115,7 +115,7 @@ const SENIOR_CARE_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '75%',
+    maxWidth: '100%',
     marginBottom: 20,
   },
   cardContainer: {
@@ -136,7 +136,9 @@ const SeniorCare = props => {
     <div>
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
-          <CardActionArea>
+          <CardActionArea
+            onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
+          >
             <CardMedia
               component="img"
               alt="Senior Care Project"
@@ -170,11 +172,14 @@ const SeniorCare = props => {
                 ? (buttonText = 'Close Gallery')
                 : (buttonText = 'Open Gallery')}
             </Button>
+            <a href="https://github.com/markolech/SeniorConnect" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>
       {displaySeniorCareGallery ? (
         <Gallery
+          lightboxIsOpen={displaySeniorCareGallery}
+          setGalleryView={setSeniorCareGallery}
           images={SENIOR_CARE_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,

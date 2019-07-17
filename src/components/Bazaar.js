@@ -71,7 +71,7 @@ const BAZAAR_IMAGES = [
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '75%',
+    maxWidth: '100%',
     marginBottom: 20,
   },
   cardContainer: {
@@ -92,7 +92,9 @@ const Bazaar = props => {
     <div>
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
-          <CardActionArea>
+          <CardActionArea
+            onClick={() => setDisplayBazaarGallery(!displayBazaarGallery)}
+          >
             <CardMedia
               component="img"
               alt="Bazaar Project"
@@ -124,11 +126,14 @@ const Bazaar = props => {
                 ? (buttonText = 'Close Gallery')
                 : (buttonText = 'Open Gallery')}
             </Button>
+            <a href="https://github.com/markolech/Bazaar" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
         </Card>
       </div>
       {displayBazaarGallery ? (
         <Gallery
+          lightboxIsOpen={displayBazaarGallery}
+          setGalleryView={setDisplayBazaarGallery}
           images={BAZAAR_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
@@ -137,7 +142,6 @@ const Bazaar = props => {
               description,
             })
           )}
-          setDisplayBazaarGallery={setDisplayBazaarGallery}
         />
       ) : null}
     </div>
