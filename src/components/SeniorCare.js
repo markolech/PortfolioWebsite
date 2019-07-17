@@ -154,7 +154,7 @@ const SeniorCare = props => {
               <Typography variant="body2" color="textSecondary" component="p">
                 A full stack application built using GraphQL, React Native, Node,
                 Express and PostgreSQL.
-              </Typography>
+              </Typography> 
             </CardContent>
           </CardActionArea>
           <CardActions>
