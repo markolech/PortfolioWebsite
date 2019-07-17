@@ -152,7 +152,7 @@ const SeniorCare = props => {
                 Senior Care
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                A full stack application built using GraphQL, React, Node,
+                A full stack application built using GraphQL, React Native, Node,
                 Express and PostgreSQL.
               </Typography>
             </CardContent>
