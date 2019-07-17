@@ -35,56 +35,56 @@ const R10_IMAGES = [
     id: '1',
     src: full01,
     thumbnail: thumb01,
-    caption: 'Photo 1',
+    caption: 'Schedule.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '2',
     src: full02,
     thumbnail: thumb02,
-    caption: 'Photo 2',
+    caption: 'Session. Add to Favourites.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '3',
     src: full03,
     thumbnail: thumb03,
-    caption: 'Photo 3',
+    caption: 'Session. Remove from Favourites.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '4',
     src: full04,
     thumbnail: thumb04,
-    caption: 'Photo 4',
+    caption: 'Favourite List.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '5',
     src: full05,
     thumbnail: thumb05,
-    caption: 'Photo 5',
+    caption: 'Speaker Information.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '6',
     src: full06,
     thumbnail: thumb06,
-    caption: 'Photo 6',
+    caption: 'About Page.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '7',
     src: full07,
     thumbnail: thumb07,
-    caption: 'Photo 7',
+    caption: 'Code of Conduct.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
   {
     id: '8',
     src: full08,
     thumbnail: thumb08,
-    caption: 'Photo 8',
+    caption: 'Map.',
     description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
   },
 ]
@@ -141,7 +141,7 @@ const R10Card = props => {
               color="primary"
               onClick={() => setDisplayR10Gallery(!displayR10Gallery)}
             >
-              Open Gallary
+              Open Gallery
             </Button>
             <a href="https://github.com/markolech/R10" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>

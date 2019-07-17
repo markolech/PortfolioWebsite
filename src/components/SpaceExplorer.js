@@ -10,61 +10,54 @@ import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
 
-// import thumb01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Full.jpg'
-// import full01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Thumb.jpg'
-import thumb02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Full.jpg'
-import full02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Thumb.jpg'
-// import thumb03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Full.jpg'
-// import full03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Thumb.jpg'
-import thumb04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Full.jpg'
-import full04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Thumb.jpg'
-// import thumb05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Full.jpg'
-// import full05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Thumb.jpg'
+import thumb01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Full.png'
+import full01 from '../assets/images/projects/Space_Explorer/Space_Explorer_01_Thumb.png'
+import thumb02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Full.png'
+import full02 from '../assets/images/projects/Space_Explorer/Space_Explorer_02_Thumb.png'
+import thumb03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Full.png'
+import full03 from '../assets/images/projects/Space_Explorer/Space_Explorer_03_Thumb.png'
+import thumb04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Full.png'
+import full04 from '../assets/images/projects/Space_Explorer/Space_Explorer_04_Full.png'
+import thumb05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Full.png'
+import full05 from '../assets/images/projects/Space_Explorer/Space_Explorer_05_Thumb.png'
 
 
 const SPACE_EXPLORER_IMAGES = [
-  // {
-  //   id: '1',
-  //   src: full01,
-  //   thumbnail: thumb01,
-  //   caption: 'Photo 1',
-  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  // },
+  {
+    id: '1',
+    src: full01,
+    thumbnail: thumb01,
+    caption: 'Landing page for the app',
+    description: 'Landing Page.',
+  },
   {
     id: '2',
     src: full02,
     thumbnail: thumb02,
-    caption: 'Photo 2',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Login Form',
+    description: 'Login uses password encryption.',
   },
-  // {
-  //   id: '3',
-  //   src: full03,
-  //   thumbnail: thumb03,
-  //   caption: 'Photo 3',
-  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  // },
+  {
+    id: '3',
+    src: full03,
+    thumbnail: thumb03,
+    caption: 'Sign Up Form',
+    description: 'Sign up for an account.',
+  },
   {
     id: '4',
     src: full04,
     thumbnail: thumb04,
-    caption: 'Photo 4',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Book a Launch.',
+    description: 'Book a Launch on a SpaceX Flight.',
   },
-  // {
-  //   id: '5',
-  //   src: full05,
-  //   thumbnail: thumb05,
-  //   caption: 'Photo 5',
-  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  // },
-  // {
-  //   id: '6',
-  //   src: full06,
-  //   thumbnail: thumb06,
-  //   caption: 'Photo 6',
-  //   description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  // },
+  {
+    id: '5',
+    src: full05,
+    thumbnail: thumb05,
+    caption: 'View your Launch.',
+    description: 'View a List of your Booked Launches.',
+  },
 ]
 
 const useStyles = makeStyles({
@@ -112,9 +105,6 @@ const SpaceExplorer = props => {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            {/* <Button size="small" color="primary">
-          Share
-        </Button> */}
             <Button
               size="small"
               color="primary"
@@ -122,7 +112,7 @@ const SpaceExplorer = props => {
                 setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
               }
             >
-            Open Gallary
+            Open Gallery
             </Button>
             <a href="https://github.com/markolech/space_explorer" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>

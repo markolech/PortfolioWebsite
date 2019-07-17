@@ -10,62 +10,52 @@ import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
-
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
+import thumb01 from '../assets/images/projects/Bazaar/Bazaar_01_Full.png'
+import full01 from '../assets/images/projects/Bazaar/Bazaar_01_Thumb.png'
+import thumb02 from '../assets/images/projects/Bazaar/Bazaar_02_Full.png'
+import full02 from '../assets/images/projects/Bazaar/Bazaar_02_Thumb.png'
+import thumb03 from '../assets/images/projects/Bazaar/Bazaar_03_Full.png'
+import full03 from '../assets/images/projects/Bazaar/Bazaar_03_Thumb.png'
+import thumb04 from '../assets/images/projects/Bazaar/Bazaar_04_Full.png'
+import full04 from '../assets/images/projects/Bazaar/Bazaar_04_Thumb.png'
+import thumb05 from '../assets/images/projects/Bazaar/Bazaar_05_Full.png'
+import full05 from '../assets/images/projects/Bazaar/Bazaar_05_Thumb.png'
 
 const BAZAAR_IMAGES = [
   {
     id: '1',
     src: full01,
     thumbnail: thumb01,
-    caption: 'Photo 1',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Landing page for the app',
+    description: 'Landing Page.',
   },
   {
     id: '2',
     src: full02,
     thumbnail: thumb02,
-    caption: 'Photo 2',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Login Form',
+    description: 'Login uses password encryption.',
   },
   {
     id: '3',
     src: full03,
     thumbnail: thumb03,
-    caption: 'Photo 3',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Sign Up Form',
+    description: 'Sign up for an account.',
   },
   {
     id: '4',
     src: full04,
     thumbnail: thumb04,
-    caption: 'Photo 4',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Buy Page.',
+    description: 'Shows all items for sale in the Bazaar Marketplace.',
   },
   {
     id: '5',
     src: full05,
     thumbnail: thumb05,
-    caption: 'Photo 5',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-  },
-  {
-    id: '6',
-    src: full06,
-    thumbnail: thumb06,
-    caption: 'Photo 6',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Sell Page.',
+    description: 'Sell Something in the Bazaar Marketplace.',
   },
 ]
 
@@ -97,7 +87,7 @@ const Bazaar = props => {
               component="img"
               alt="Bazaar Project"
               height="240"
-              image={thumb03}
+              image={thumb01}
               title="Bazaar Project"
             />
             <CardContent>
@@ -120,7 +110,7 @@ const Bazaar = props => {
               color="primary"
               onClick={() => setDisplayBazaarGallery(!displayBazaarGallery)}
             >
-              Open Gallary
+              Open Gallery
             </Button>
             <a href="https://github.com/markolech/Bazaar" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
           </CardActions>
