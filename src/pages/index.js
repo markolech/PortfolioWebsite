@@ -27,12 +27,18 @@ const HomeIndex = () => {
           <p>
             I am a Full Stack Application Developer specializing in GraphQL,
             React, React Native, iOS, Android, Node and Express. I am also PMP
-            (Project Management Professional) certified. If you would like to
+            (Project Management Professional) certified and have 10+ years of
+            experience working in Information Technology. If you would like to
             contact me, the best place to reach me is on Twitter.
           </p>
           <ul className="actions">
             <li>
-              <a href="https://twitter.com/MarkOlech" rel="noopener noreferrer" target="_blank" className="button">
+              <a
+                href="https://twitter.com/MarkOlech"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="button"
+              >
                 Contact on Twitter
               </a>
             </li>
