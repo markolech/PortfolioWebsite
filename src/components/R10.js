@@ -9,8 +9,6 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
-// import LargeGalleryModal from '../components/LargeGalleryModal'
-
 import thumb01 from '../assets/images/projects/R10/R10_01_full.jpg'
 import full01 from '../assets/images/projects/R10/R10_01_thumb.jpg'
 import thumb02 from '../assets/images/projects/R10/R10_02_full.jpg'

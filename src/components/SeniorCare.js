@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
-
 import thumb01 from '../assets/images/projects/Senior_Care/Senior_Care_01_Full.jpg'
 import full01 from '../assets/images/projects/Senior_Care/Senior_Care_01_Thumb.jpg'
 import thumb02 from '../assets/images/projects/Senior_Care/Senior_Care_02_Full.jpg'
@@ -152,15 +151,12 @@ const SeniorCare = props => {
                 Senior Care
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                A full stack application built using GraphQL, React, Node,
+                A full stack application built using GraphQL, React Native, Node,
                 Express and PostgreSQL.
-              </Typography>
+              </Typography> 
             </CardContent>
           </CardActionArea>
           <CardActions>
-            {/* <Button size="small" color="primary">
-          Share
-        </Button> */}
             <Button
               size="small"
               color="primary"

@@ -7,6 +7,7 @@ import SeniorCare from '../components/SeniorCare'
 import R10Card from '../components/R10'
 import Bazaar from '../components/Bazaar'
 import SpaceExplorer from '../components/SpaceExplorer'
+import Hired from '../components/Hired'
 
 const HomeIndex = () => {
   const siteTitle = 'Mark Olech'
@@ -56,6 +57,9 @@ const HomeIndex = () => {
               <SpaceExplorer />
 
               <Bazaar />
+
+              <Hired />
+
             </div>
           </div>
         </section>
