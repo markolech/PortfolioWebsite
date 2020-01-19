@@ -8,6 +8,7 @@ import R10Card from '../components/R10'
 import Bazaar from '../components/Bazaar'
 import SpaceExplorer from '../components/SpaceExplorer'
 import Hired from '../components/Hired'
+import Genwave from '../components/Genwave'
 
 const HomeIndex = () => {
   const siteTitle = 'Mark Olech'
@@ -54,11 +55,14 @@ const HomeIndex = () => {
 
               <R10Card />
 
+              <Genwave />
+
               <SpaceExplorer />
 
               <Bazaar />
 
               <Hired />
+
 
             </div>
           </div>

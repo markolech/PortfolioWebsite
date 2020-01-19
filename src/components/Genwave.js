@@ -9,43 +9,52 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
-import thumb01 from '../assets/images/projects/Hired/Hired_01_Full.png'
-import full01 from '../assets/images/projects/Hired/Hired_01_Thumb.png'
-import thumb02 from '../assets/images/projects/Hired/Hired_02_Full.png'
-import full02 from '../assets/images/projects/Hired/Hired_02_Thumb.png'
-import thumb03 from '../assets/images/projects/Hired/Hired_03_Full.png'
-import full03 from '../assets/images/projects/Hired/Hired_03_Thumb.png'
-import thumb04 from '../assets/images/projects/Hired/Hired_04_Full.png'
-import full04 from '../assets/images/projects/Hired/Hired_04_Full.png'
+import thumb01 from '../assets/images/projects/Genwave/Genwave_01_Full.jpg'
+import full01 from '../assets/images/projects/Genwave/Genwave_01_Thumb.jpg'
+import thumb02 from '../assets/images/projects/Genwave/Genwave_02_Full.jpg'
+import full02 from '../assets/images/projects/Genwave/Genwave_02_Thumb.jpg'
+import thumb03 from '../assets/images/projects/Genwave/Genwave_03_Full.jpg'
+import full03 from '../assets/images/projects/Genwave/Genwave_03_Thumb.jpg'
+import thumb04 from '../assets/images/projects/Genwave/Genwave_04_Full.jpg'
+import full04 from '../assets/images/projects/Genwave/Genwave_04_Thumb.jpg'
+import thumb05 from '../assets/images/projects/Genwave/Genwave_05_Full.jpg'
+import full05 from '../assets/images/projects/Genwave/Genwave_05_Thumb.jpg'
 
-const HIRED_IMAGES = [
+const GENWAVE_IMAGES = [
   {
     id: '1',
     src: full01,
     thumbnail: thumb01,
-    caption: 'Landing page for the app',
-    description: 'Landing Page.',
+    caption: 'Main page for the website',
+    description: 'Landing Page Partial Screen 1',
   },
   {
     id: '2',
     src: full02,
     thumbnail: thumb02,
-    caption: 'Redbook',
-    description: 'List of all graduates.',
+    caption: 'Main page for the website continued',
+    description: 'Landing Page Partial Screen 2',
   },
   {
     id: '3',
     src: full03,
     thumbnail: thumb03,
-    caption: 'Mentors',
-    description: 'List of all mentors.',
+    caption: 'Main page for the website continued',
+    description: 'Landing Page Partial Screen 3',
   },
   {
     id: '4',
     src: full04,
     thumbnail: thumb04,
-    caption: 'Chat',
-    description: 'Chat with other Red alumni.',
+    caption: 'Main page for the website continued',
+    description: 'Landing Page Partial Screen 4',
+  },
+  {
+    id: '5',
+    src: full05,
+    thumbnail: thumb05,
+    caption: 'Main page for the website continued',
+    description: 'Landing Page Partial Screen 5',
   },
 ]
 
@@ -61,11 +70,8 @@ const useStyles = makeStyles({
   },
 })
 
-const Hired = props => {
-  const [
-    displayHiredGallery,
-    setDisplayHiredGallery,
-  ] = useState(false)
+const Genwave = props => {
+  const [displayGenwaveGallery, setDisplayGenwaveGallery] = useState(false)
 
   const classes = useStyles()
 
@@ -74,22 +80,22 @@ const Hired = props => {
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
           <CardActionArea
-            onClick={() => setDisplayHiredGallery(!displayHiredGallery)}
+            onClick={() => setDisplayGenwaveGallery(!displayGenwaveGallery)}
           >
             <CardMedia
               component="img"
-              alt="Hired Project"
+              alt="Genwave Project"
               height="240"
               image={thumb01}
-              title="Hired Project"
+              title="Genwave Project"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                HiRED
+                Genwave
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                A web application built using GraphQL, React, Node, and Express.
-                Red Alumni can connect, find mentors and become a mentor.
+                A website I designed and built for a client. The site runs
+                WordPress with the Divi theme and some custom CSS.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -97,9 +103,7 @@ const Hired = props => {
             <Button
               size="small"
               color="primary"
-              onClick={() =>
-                setDisplayHiredGallery(!displayHiredGallery)
-              }
+              onClick={() => setDisplayGenwaveGallery(!displayGenwaveGallery)}
             >
               Open Gallery
             </Button>
@@ -107,11 +111,11 @@ const Hired = props => {
           </CardActions>
         </Card>
       </div>
-      {displayHiredGallery ? (
+      {displayGenwaveGallery ? (
         <Gallery
-          lightboxIsOpen={displayHiredGallery}
-          setGalleryView={setDisplayHiredGallery}
-          images={HIRED_IMAGES.map(
+          lightboxIsOpen={displayGenwaveGallery}
+          setGalleryView={setDisplayGenwaveGallery}
+          images={GENWAVE_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
               thumbnail,
@@ -125,4 +129,4 @@ const Hired = props => {
   )
 }
 
-export default Hired
+export default Genwave
