@@ -101,7 +101,7 @@ const Hired = props => {
                 setDisplayHiredGallery(!displayHiredGallery)
               }
             >
-            Open Gallery
+              Open Gallery
             </Button>
             {/* <a href="https://github.com/markolech/space_explorer" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a> */}
           </CardActions>
@@ -109,8 +109,8 @@ const Hired = props => {
       </div>
       {displayHiredGallery ? (
         <Gallery
-        lightboxIsOpen={displayHiredGallery}
-        setGalleryView={setDisplayHiredGallery}
+          lightboxIsOpen={displayHiredGallery}
+          setGalleryView={setDisplayHiredGallery}
           images={HIRED_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,
