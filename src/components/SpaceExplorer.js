@@ -83,12 +83,14 @@ const SpaceExplorer = props => {
       <div className={classes.cardContainer}>
         <Card className={classes.card}>
           <CardActionArea
-            onClick={() => setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)}
+            onClick={() =>
+              setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
+            }
           >
             <CardMedia
               component="img"
               alt="Bazaar Project"
-              height="240"
+              height="480"
               image={thumb04}
               title="Bazaar Project"
             />
@@ -110,16 +112,23 @@ const SpaceExplorer = props => {
                 setDisplaySpaceExplorerGallery(!displaySpaceExplorerGallery)
               }
             >
-            Open Gallery
+              Open Gallery
             </Button>
-            <a href="https://github.com/markolech/space_explorer" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a
+              href="https://github.com/markolech/space_explorer"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="icon fa-github fa-lg"
+            >
+              <span className="label">Github</span>
+            </a>
           </CardActions>
         </Card>
       </div>
       {displaySpaceExplorerGallery ? (
         <Gallery
-        lightboxIsOpen={displaySpaceExplorerGallery}
-        setGalleryView={setDisplaySpaceExplorerGallery}
+          lightboxIsOpen={displaySpaceExplorerGallery}
+          setGalleryView={setDisplaySpaceExplorerGallery}
           images={SPACE_EXPLORER_IMAGES.map(
             ({ id, src, thumbnail, caption, description }) => ({
               src,

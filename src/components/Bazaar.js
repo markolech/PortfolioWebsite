@@ -86,7 +86,7 @@ const Bazaar = props => {
             <CardMedia
               component="img"
               alt="Bazaar Project"
-              height="240"
+              height="480"
               image={thumb01}
               title="Bazaar Project"
             />
@@ -112,7 +112,14 @@ const Bazaar = props => {
             >
               Open Gallery
             </Button>
-            <a href="https://github.com/markolech/Bazaar" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a
+              href="https://github.com/markolech/Bazaar"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="icon fa-github fa-lg"
+            >
+              <span className="label">Github</span>
+            </a>
           </CardActions>
         </Card>
       </div>

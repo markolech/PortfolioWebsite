@@ -62,10 +62,7 @@ const useStyles = makeStyles({
 })
 
 const Hired = props => {
-  const [
-    displayHiredGallery,
-    setDisplayHiredGallery,
-  ] = useState(false)
+  const [displayHiredGallery, setDisplayHiredGallery] = useState(false)
 
   const classes = useStyles()
 
@@ -79,7 +76,7 @@ const Hired = props => {
             <CardMedia
               component="img"
               alt="Hired Project"
-              height="240"
+              height="480"
               image={thumb01}
               title="Hired Project"
             />
@@ -97,9 +94,7 @@ const Hired = props => {
             <Button
               size="small"
               color="primary"
-              onClick={() =>
-                setDisplayHiredGallery(!displayHiredGallery)
-              }
+              onClick={() => setDisplayHiredGallery(!displayHiredGallery)}
             >
               Open Gallery
             </Button>
