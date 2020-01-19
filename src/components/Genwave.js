@@ -9,16 +9,16 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import Gallery from '../components/Gallery'
-import thumb01 from '../assets/images/projects/Genwave/Genwave_01_Full.PNG'
-import full01 from '../assets/images/projects/Genwave/Genwave_01_Thumb.PNG'
-import thumb02 from '../assets/images/projects/Genwave/Genwave_02_Full.PNG'
-import full02 from '../assets/images/projects/Genwave/Genwave_02_Thumb.PNG'
-import thumb03 from '../assets/images/projects/Genwave/Genwave_03_Full.PNG'
-import full03 from '../assets/images/projects/Genwave/Genwave_03_Thumb.PNG'
-import thumb04 from '../assets/images/projects/Genwave/Genwave_04_Full.PNG'
-import full04 from '../assets/images/projects/Genwave/Genwave_04_Thumb.PNG'
-import thumb05 from '../assets/images/projects/Genwave/Genwave_05_Full.PNG'
-import full05 from '../assets/images/projects/Genwave/Genwave_05_Thumb.PNG'
+import thumb01 from '../assets/images/projects/Genwave/Genwave_01_Full.jpg'
+import full01 from '../assets/images/projects/Genwave/Genwave_01_Thumb.jpg'
+import thumb02 from '../assets/images/projects/Genwave/Genwave_02_Full.jpg'
+import full02 from '../assets/images/projects/Genwave/Genwave_02_Thumb.jpg'
+import thumb03 from '../assets/images/projects/Genwave/Genwave_03_Full.jpg'
+import full03 from '../assets/images/projects/Genwave/Genwave_03_Thumb.jpg'
+import thumb04 from '../assets/images/projects/Genwave/Genwave_04_Full.jpg'
+import full04 from '../assets/images/projects/Genwave/Genwave_04_Thumb.jpg'
+import thumb05 from '../assets/images/projects/Genwave/Genwave_05_Full.jpg'
+import full05 from '../assets/images/projects/Genwave/Genwave_05_Thumb.jpg'
 
 const GENWAVE_IMAGES = [
   {
@@ -71,10 +71,7 @@ const useStyles = makeStyles({
 })
 
 const Genwave = props => {
-  const [
-    displayGenwaveGallery,
-    setDisplayGenwaveGallery,
-  ] = useState(false)
+  const [displayGenwaveGallery, setDisplayGenwaveGallery] = useState(false)
 
   const classes = useStyles()
 
@@ -97,7 +94,8 @@ const Genwave = props => {
                 Genwave
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                A website I designed and built for a client. The site runs WordPress with the Divi theme and some custom CSS.
+                A website I designed and built for a client. The site runs
+                WordPress with the Divi theme and some custom CSS.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -105,9 +103,7 @@ const Genwave = props => {
             <Button
               size="small"
               color="primary"
-              onClick={() =>
-                setDisplayGenwaveGallery(!displayGenwaveGallery)
-              }
+              onClick={() => setDisplayGenwaveGallery(!displayGenwaveGallery)}
             >
               Open Gallery
             </Button>
