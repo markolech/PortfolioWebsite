@@ -85,7 +85,7 @@ const Genwave = props => {
             <CardMedia
               component="img"
               alt="Genwave Project"
-              height="240"
+              height="480"
               image={thumb01}
               title="Genwave Project"
             />

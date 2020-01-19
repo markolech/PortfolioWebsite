@@ -45,7 +45,8 @@ const SENIOR_CARE_IMAGES = [
     src: full02,
     thumbnail: thumb02,
     caption: 'Login',
-    description: 'Login screen 2-factor authentication (password / email or SMS).',
+    description:
+      'Login screen 2-factor authentication (password / email or SMS).',
   },
   {
     id: '3',
@@ -139,7 +140,7 @@ const SeniorCare = props => {
             <CardMedia
               component="img"
               alt="Senior Care Project"
-              height="240"
+              height="480"
               image={thumb01}
               title="Senior Care Project"
               onClick={() => setSeniorCareGallery(!displaySeniorCareGallery)}
@@ -151,9 +152,9 @@ const SeniorCare = props => {
                 Senior Care
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                A full stack application built using GraphQL, React Native, Node,
-                Express and PostgreSQL.
-              </Typography> 
+                A full stack application built using GraphQL, React Native,
+                Node, Express and PostgreSQL.
+              </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
@@ -164,7 +165,14 @@ const SeniorCare = props => {
             >
               Open Gallery
             </Button>
-            <a href="https://github.com/markolech/SeniorConnect" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a
+              href="https://github.com/markolech/SeniorConnect"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="icon fa-github fa-lg"
+            >
+              <span className="label">Github</span>
+            </a>
           </CardActions>
         </Card>
       </div>

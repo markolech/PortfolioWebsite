@@ -33,57 +33,57 @@ const R10_IMAGES = [
     id: '1',
     src: full01,
     thumbnail: thumb01,
-    caption: 'Schedule.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Schedule',
+    description: 'Schedule',
   },
   {
     id: '2',
     src: full02,
     thumbnail: thumb02,
-    caption: 'Session. Add to Favourites.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Session, Add to Favourites.',
+    description: 'Session, Add to Favourites.',
   },
   {
     id: '3',
     src: full03,
     thumbnail: thumb03,
     caption: 'Session. Remove from Favourites.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'Session. Remove from Favourites.',
   },
   {
     id: '4',
     src: full04,
     thumbnail: thumb04,
     caption: 'Favourite List.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'Favourite List.',
   },
   {
     id: '5',
     src: full05,
     thumbnail: thumb05,
     caption: 'Speaker Information.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'Speaker Information.',
   },
   {
     id: '6',
     src: full06,
     thumbnail: thumb06,
     caption: 'About Page.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'About Page.',
   },
   {
     id: '7',
     src: full07,
     thumbnail: thumb07,
     caption: 'Code of Conduct.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'Code of Conduct.',
   },
   {
     id: '8',
     src: full08,
     thumbnail: thumb08,
     caption: 'Map.',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    description: 'Map.',
   },
 ]
 
@@ -114,7 +114,7 @@ const R10Card = props => {
             <CardMedia
               component="img"
               alt="R10 Project"
-              height="240"
+              height="480"
               image={thumb01}
               title="R10 Project"
             />
@@ -141,7 +141,14 @@ const R10Card = props => {
             >
               Open Gallery
             </Button>
-            <a href="https://github.com/markolech/R10" rel="noopener noreferrer" target="_blank" className="icon fa-github fa-lg"><span className="label">Github</span></a>
+            <a
+              href="https://github.com/markolech/R10"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="icon fa-github fa-lg"
+            >
+              <span className="label">Github</span>
+            </a>
           </CardActions>
         </Card>
       </div>
@@ -159,7 +166,6 @@ const R10Card = props => {
           )}
         />
       ) : null}
-  
     </div>
   )
 }
