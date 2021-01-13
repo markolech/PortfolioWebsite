@@ -5,8 +5,6 @@ import Layout from '../components/layout'
 
 import SeniorCare from '../components/SeniorCare'
 import R10Card from '../components/R10'
-import Bazaar from '../components/Bazaar'
-import SpaceExplorer from '../components/SpaceExplorer'
 import Hired from '../components/Hired'
 import Genwave from '../components/Genwave'
 
@@ -57,12 +55,7 @@ const HomeIndex = () => {
 
               <Genwave />
 
-              <SpaceExplorer />
-
-              <Bazaar />
-
               <Hired />
-
 
             </div>
           </div>
